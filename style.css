@@ -6,14 +6,10 @@ Most of your styles get written like standard CSS, but for your mobile presentat
 Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
 You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
 */
-
-
 /* THIS LINE LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES */
-
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
 
 /* Start your base/mobile styles here */
-
 * {
     box-sizing: border-box;
 }
@@ -38,6 +34,8 @@ html, body {
 
 .department {
     margin-bottom: 1em;
+    border: 1px solid #000;
+    padding: 5px;
 }
 
 .total_budget {
@@ -53,9 +51,11 @@ input {
     padding: .5em;
 }
 
+.over_budget {
+    color: red;
+}
 
 /* Tablet/Desktop overrides */
-
 @media(min-width: 681px) {}
 
 @media(min-width: 729px) {
